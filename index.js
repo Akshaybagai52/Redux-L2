@@ -77,12 +77,6 @@ const rootReducer = combineReducers({
   iceCream: iceCreamReducer,
 });
 
-const store = createStore(rootReducer);
-console.log("Initial State", store.getState());
-
-const unsubscribe = store.subscribe(() =>
-  console.log("updated state", store.getState())
-);
 
 store.dispatch(orderCake());
 store.dispatch(orderCake());
