@@ -1,4 +1,4 @@
-const { cakeActions } = require('../cake/cakeSlice');
+// const { cakeActions } = require('../cake/cakeSlice');
 import { ordered as cakeOrdered } from '../cake/cakeSlice';
 
 import { createSlice } from '@reduxjs/toolkit'
