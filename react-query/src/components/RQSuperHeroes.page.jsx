@@ -5,6 +5,9 @@ import { useQuery } from 'react-query'
 const RQSuperHeroesPage = () => {
   const {isLoading, data, isError, error} = useQuery('super-heroes', () => {
    return axios.get('http://localhost:400/superheroes')
+  }, {
+    refetchOnMount: false,
+    refetchOnWindowFocus: true,
   })
   if(isLoading) {
     return <h2>Loading.....</h2>
