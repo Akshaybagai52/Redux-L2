@@ -3,12 +3,12 @@ import './App.css'
 import SuperHeroesPage from './components/SuperHeroes.page'
 import RQSuperHeroesPage from './components/RQSuperHeroes.page'
 import HomePage from './components/Home.page'
-// import { HomePage } from './components/Home.page'
-// import { RQSuperHeroesPage } from './components/RQSuperHeroes.page'
-// import { SuperHeroesPage } from './components/SuperHeroes.page'
+import {QueryClientProvider, QueryClient} from 'react-query'
 
+const queryClient = new QueryClient()
 function App() {
   return (
+    <QueryClientProvider client={queryClient}>
     <Router>
       <div>
         <nav>
@@ -42,6 +42,7 @@ function App() {
 
       </div>
     </Router>
+    </QueryClientProvider>
   )
 }
 
