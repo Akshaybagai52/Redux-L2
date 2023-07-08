@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 
 const SuperHeroesPage = () => {
@@ -17,7 +18,7 @@ const SuperHeroesPage = () => {
     <div>
         <h2>Super Heroes Page</h2>
         {data.map((item) => {
-            return <div key={item.name}>{item} </div>
+            return <div key={item.name}>{item.name} </div>
         })}
     </div>
   )
